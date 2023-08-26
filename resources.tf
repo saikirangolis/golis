@@ -10,7 +10,8 @@ resource "aws_subnet" "private_subnet" {
     vpc_id = aws_vpc.golivpc.id
 }
 resource "aws_instance" "sai" {
-    ami = ami-06f621d90fa29f6d0
+    ami = "ami-06f621d90fa29f6d0"
+    instance_type = "t2.micro"
     tags = { 
         name = "mywebserver"
     }
